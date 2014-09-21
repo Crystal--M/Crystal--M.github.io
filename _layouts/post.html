@@ -51,6 +51,7 @@
         {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
       </footer>
       <div class="entry-content">
+      {% include comments.html %}
         {{ content }}
         {% if site.owner.disqus-shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
       </div><!-- /.entry-content -->
@@ -63,7 +64,7 @@
         <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
       {% endif %}
     </nav><!-- /.pagination -->
-    {% include comments.html %}
+    
   </article>
 </div><!-- /#main -->
 
